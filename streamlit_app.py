@@ -35,7 +35,7 @@ streamlit.write('The user entered ', fruit_choice)
 
 import snowflake.connector
 
-my_cnx = snowflake.connector.connect(streamlit.secrets["snowflake"])
+my_cnx = snowflake.connector.connect(streamlit.secrets['snowflake'])
 my_cur = my_cnx.cursor()
 my_cur.execute(SELECT USER(nnarayanan), ACCOUNT(ZTTOKZU-SW66952), REGION(Canada (Central)))
 my_data_row = my_cur.fetchone()
